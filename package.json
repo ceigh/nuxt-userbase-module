@@ -16,6 +16,9 @@
     "test": "NODE_ENV=test jest",
     "format": "prettier --write --ignore-path .gitignore './**/*.{ts,json,vue}' '!.yarn/**'"
   },
+  "dependencies": {
+    "userbase-js": "^1.4.0"
+  },
   "devDependencies": {
     "@nuxt/types": "^0.7.6",
     "@types/jest": "^25.2.3",
@@ -29,15 +32,17 @@
   },
   "jest": {
     "preset": "ts-jest",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "globals": {
+      "ts-jest": {
+        "packageJson": "package.json"
+      }
+    }
   },
   "prettier": "prettier-config-standard",
   "husky": {
     "hooks": {
       "pre-commit": "yarn format && yarn test && yarn build"
     }
-  },
-  "dependencies": {
-    "userbase-js": "^1.4.0"
   }
 }
