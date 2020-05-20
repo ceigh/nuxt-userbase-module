@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Userbase plugin for Nuxt",
   "author": "Artjom Löbsack <ceigh@pm.me> (http://ceigh.github.io)",
+  "private": true,
   "keywords": [
     "userbase",
     "nuxt"
@@ -12,7 +13,6 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "dev": "nuxt test/fixture",
     "test": "NODE_ENV=test jest",
     "format": "prettier --write --ignore-path .gitignore './**/*.{ts,json,vue}' '!.yarn/**'"
   },
@@ -22,7 +22,6 @@
     "@types/node": "^14.0.4",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
-    "nuxt": "^2.12.2",
     "prettier": "^2.0.5",
     "prettier-config-standard": "^1.0.1",
     "ts-jest": "^26.0.0",
