@@ -2,9 +2,7 @@
   "name": "nuxt-userbase",
   "version": "0.1.0",
   "description": "Userbase plugin for Nuxt",
-  "author": {
-    "name": "Artjom Löbsack"
-  },
+  "author": "Artjom Löbsack <ceigh@pm.me> (http://ceigh.github.io)",
   "keywords": [
     "userbase",
     "nuxt",
