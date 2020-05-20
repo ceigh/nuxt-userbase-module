@@ -68,6 +68,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "typescript",
         "patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=8cac75"
+      ],
+      [
+        "userbase-js",
+        "npm:1.4.0"
       ]
     ],
     "locationBlacklistData": [
@@ -86,7 +90,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.0.5"],
             ["prettier-config-standard", "npm:1.0.1"],
             ["ts-jest", "virtual:2567e7c8c19f4ef66d97eb8e6b08d7b89a5ae4155ec8ad349fd37be4321789dcdaa6427f101dba25fea69ac2ca141cde79f8d1af25ac0d5b02655b9d273cade0#npm:26.0.0"],
-            ["typescript", "patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=8cac75"]
+            ["typescript", "patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=8cac75"],
+            ["userbase-js", "npm:1.4.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -3506,6 +3511,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["isobject", "npm:3.0.1"],
             ["mixin-deep", "npm:1.3.2"],
             ["pascalcase", "npm:0.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["base64-arraybuffer", [
+        ["npm:0.2.0", {
+          "packageLocation": "./.yarn/cache/base64-arraybuffer-npm-0.2.0-a0bf606f69-3.zip/node_modules/base64-arraybuffer/",
+          "packageDependencies": [
+            ["base64-arraybuffer", "npm:0.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -8660,6 +8674,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["lz-string", [
+        ["npm:1.4.4", {
+          "packageLocation": "./.yarn/cache/lz-string-npm-1.4.4-59a2091d3f-3.zip/node_modules/lz-string/",
+          "packageDependencies": [
+            ["lz-string", "npm:1.4.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["make-dir", [
         ["npm:1.3.0", {
           "packageLocation": "./.yarn/cache/make-dir-npm-1.3.0-692810d225-3.zip/node_modules/make-dir/",
@@ -9484,7 +9507,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.0.5"],
             ["prettier-config-standard", "npm:1.0.1"],
             ["ts-jest", "virtual:2567e7c8c19f4ef66d97eb8e6b08d7b89a5ae4155ec8ad349fd37be4321789dcdaa6427f101dba25fea69ac2ca141cde79f8d1af25ac0d5b02655b9d273cade0#npm:26.0.0"],
-            ["typescript", "patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=8cac75"]
+            ["typescript", "patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=8cac75"],
+            ["userbase-js", "npm:1.4.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -11916,6 +11940,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["scrypt-js", [
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/scrypt-js-npm-3.0.1-fd2d3fa606-3.zip/node_modules/scrypt-js/",
+          "packageDependencies": [
+            ["scrypt-js", "npm:3.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["semver", [
         ["npm:5.7.1", {
           "packageLocation": "./.yarn/cache/semver-npm-5.7.1-40bcea106b-3.zip/node_modules/semver/",
@@ -12227,6 +12260,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["sort-keys", "npm:2.0.0"],
             ["is-plain-obj", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["sorted-array", [
+        ["npm:2.0.4", {
+          "packageLocation": "./.yarn/cache/sorted-array-npm-2.0.4-125e67adce-3.zip/node_modules/sorted-array/",
+          "packageDependencies": [
+            ["sorted-array", "npm:2.0.4"]
           ],
           "linkType": "HARD",
         }]
@@ -13513,6 +13555,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/use-npm-3.1.1-7ba643714c-3.zip/node_modules/use/",
           "packageDependencies": [
             ["use", "npm:3.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["userbase-js", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/userbase-js-npm-1.4.0-c8bb4acea3-3.zip/node_modules/userbase-js/",
+          "packageDependencies": [
+            ["userbase-js", "npm:1.4.0"],
+            ["@babel/runtime", "npm:7.9.6"],
+            ["base64-arraybuffer", "npm:0.2.0"],
+            ["diffie-hellman", "npm:5.0.3"],
+            ["lz-string", "npm:1.4.4"],
+            ["scrypt-js", "npm:3.0.1"],
+            ["sorted-array", "npm:2.0.4"],
+            ["uuid", "npm:3.4.0"]
           ],
           "linkType": "HARD",
         }]

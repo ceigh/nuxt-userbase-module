@@ -1,9 +1,9 @@
 interface InitOpts {
   readonly appId: string
 }
-type Init = (opts: InitOpts) => Session
 
-interface UserbaseResult {
-  readonly init: Init
+interface Userbase {
+  readonly init: (opts: InitOpts) => Promise<Session>
 }
-export type Userbase = () => UserbaseResult
+
+export type UserbaseInit = () => Userbase

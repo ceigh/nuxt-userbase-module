@@ -2972,6 +2972,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"base64-arraybuffer@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "base64-arraybuffer@npm:0.2.0"
+  checksum: 3/097fafec2f8ac4b9de62426cf7132123b82f6f5a941dc45301a532ae54d64b75af45ab92dc041dc6d77a3fcdc1032143b39450bb8eeefe7a3d22ac69c7e3df8a
+  languageName: node
+  linkType: hard
+
 "base64-js@npm:^1.0.2":
   version: 1.3.1
   resolution: "base64-js@npm:1.3.1"
@@ -4595,7 +4602,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diffie-hellman@npm:^5.0.0":
+"diffie-hellman@npm:^5.0.0, diffie-hellman@npm:^5.0.3":
   version: 5.0.3
   resolution: "diffie-hellman@npm:5.0.3"
   dependencies:
@@ -7666,6 +7673,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"lz-string@npm:^1.4.4":
+  version: 1.4.4
+  resolution: "lz-string@npm:1.4.4"
+  bin:
+    lz-string: bin/bin.js
+  checksum: 3/60a13f8a724d109cffc7dda4cb98569adfa0516750f8a75b7236f6bc94b47edffb59e8a1e501364404e3867cf399e6612c3981f9c81c2de75751203431bf2e69
+  languageName: node
+  linkType: hard
+
 "make-dir@npm:^1.0.0":
   version: 1.3.0
   resolution: "make-dir@npm:1.3.0"
@@ -8407,6 +8423,7 @@ fsevents@^1.2.7:
     prettier-config-standard: ^1.0.1
     ts-jest: ^26.0.0
     typescript: ^3.9.3
+    userbase-js: ^1.4.0
   languageName: unknown
   linkType: soft
 
@@ -10613,6 +10630,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"scrypt-js@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "scrypt-js@npm:3.0.1"
+  checksum: 3/2ae93c4dd519c05a53c169fb92bbc2f76c38c7b2a277492e098f300caf099ccfae07de06441f9a9af4fceda1af65c9fff3a1af6b33da293586cd3ea33db7d40d
+  languageName: node
+  linkType: hard
+
 "semver-compare@npm:^1.0.0":
   version: 1.0.0
   resolution: "semver-compare@npm:1.0.0"
@@ -10898,6 +10922,13 @@ fsevents@^1.2.7:
   dependencies:
     is-plain-obj: ^1.0.0
   checksum: 3/c0437ce7fbcc35e6f255f46cc4ba350cadac3199f4af3ee8c8b305f50a35b6ead4fec814a4d86ffa49c8ec9e5bf064877232a7d45270c6e31f725209a1c4ef3d
+  languageName: node
+  linkType: hard
+
+"sorted-array@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "sorted-array@npm:2.0.4"
+  checksum: 3/b0659123f7fc64e2e781dc3d63e5c2752a57045a86ba36e2f84fb439ea56af4a295eed6c23b118c5ba85f7c5264360e4abb63533b9b6c471a3c38ccf39c1a0e6
   languageName: node
   linkType: hard
 
@@ -12060,6 +12091,21 @@ typescript@^3.9.3:
   languageName: node
   linkType: hard
 
+"userbase-js@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "userbase-js@npm:1.4.0"
+  dependencies:
+    "@babel/runtime": ^7.9.2
+    base64-arraybuffer: ^0.2.0
+    diffie-hellman: ^5.0.3
+    lz-string: ^1.4.4
+    scrypt-js: ^3.0.0
+    sorted-array: ^2.0.4
+    uuid: ^3.3.3
+  checksum: 3/774a26d865bf14ee26320e8dd8b7b07855f3d06f3c3a55295b369b5ad4135c36d5018a319d7c81bdd3993d62f972138d7df53aeac6fa3659487f76065ab37b4f
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -12123,7 +12169,7 @@ typescript@^3.9.3:
   languageName: node
   linkType: hard
 
-"uuid@npm:^3.3.2":
+"uuid@npm:^3.3.2, uuid@npm:^3.3.3":
   version: 3.4.0
   resolution: "uuid@npm:3.4.0"
   bin:

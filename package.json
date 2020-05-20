@@ -37,5 +37,8 @@
     "hooks": {
       "pre-commit": "yarn format && yarn test && yarn build"
     }
+  },
+  "dependencies": {
+    "userbase-js": "^1.4.0"
   }
 }
