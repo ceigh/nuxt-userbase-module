@@ -13,36 +13,24 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "test": "NODE_ENV=test jest",
     "format": "prettier --write --ignore-path .gitignore './**/*.{ts,json,vue}' '!.yarn/**'"
   },
   "dependencies": {
     "userbase-js": "^1.4.0"
   },
   "devDependencies": {
-    "@nuxt/types": "^0.7.6",
-    "@types/jest": "^25.2.3",
-    "@types/node": "^14.0.4",
-    "husky": "^4.2.5",
-    "jest": "^26.0.1",
-    "prettier": "^2.0.5",
-    "prettier-config-standard": "^1.0.1",
-    "ts-jest": "^26.0.0",
-    "typescript": "^3.9.3"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "globals": {
-      "ts-jest": {
-        "packageJson": "package.json"
-      }
-    }
+    "@nuxt/types": "latest",
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "husky": "latest",
+    "prettier": "latest",
+    "prettier-config-standard": "latest",
+    "typescript": "latest"
   },
   "prettier": "prettier-config-standard",
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format && yarn test && yarn build"
+      "pre-commit": "yarn format && yarn build"
     }
   }
 }
