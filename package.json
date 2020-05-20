@@ -5,31 +5,23 @@
   "author": "Artjom Löbsack <ceigh@pm.me> (http://ceigh.github.io)",
   "keywords": [
     "userbase",
-    "nuxt",
-    "nuxt.js"
+    "nuxt"
   ],
   "main": "lib/module.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nuxt test/fixture",
-    "test": "NODE_ENV=test jest",
     "build": "tsc",
     "watch": "tsc --watch",
-    "test:unit": "NODE_ENV=test jest --testRegex \"/test/unit/(.+)\\.test\\.js$\"",
-    "test:system": "NODE_ENV=test jest --testRegex \"/test/system/(.+)\\.test\\.js$\"",
-    "test:coverage": "NODE_ENV=test yarn test --coverage",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{js,ts,json,vue}'"
-  },
-  "dependencies": {
-    "consola": "^2.12.1"
+    "dev": "nuxt test/fixture",
+    "test": "NODE_ENV=test jest",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{ts,json,vue}' '!.yarn/**'"
   },
   "devDependencies": {
-    "@types/consola": "^2.2.5",
+    "@nuxt/types": "^0.7.6",
     "@types/jest": "^25.2.3",
     "@types/jsdom": "^16.2.3",
     "@types/node": "^14.0.4",
     "jest": "^26.0.1",
-    "nuxt": "^2.12.2",
     "prettier": "^2.0.5",
     "puppeteer": "^3.1.0",
     "ts-jest": "^26.0.0",
@@ -37,10 +29,7 @@
   },
   "jest": {
     "preset": "ts-jest",
-    "testEnvironment": "node",
-    "collectCoverageFrom": [
-      "lib/**/*.{js,jsx}"
-    ]
+    "testEnvironment": "node"
   },
   "prettier": {
     "trailingComma": "none",

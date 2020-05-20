@@ -1,25 +1,16 @@
-import { ModuleOptions } from './types/nuxt'
-// import { createMiddleware } from './module.middleware'
-// import plugin from './module.plugin'
+import path from 'path'
+import { Module } from '@nuxt/types'
 
-const optionName = 'nuxt-userbase'
-
-type TODO = any
-
-module.exports = function(this: TODO, moduleOptions: ModuleOptions) {
-  const consola = require('consola')
-  const options = Object.assign(
-    {},
-    this.options[optionName],
-    moduleOptions || {}
-  )
-  const { enabled } = options
-  if (enabled === false) {
-    consola.info('Skip activation of nuxt-userbase module')
-    return false
-  }
-  consola.info('Add nuxt-userbase module to server middleware')
-  return true
+interface Options {
+  id: string
 }
 
-module.exports.meta = require('../package.json')
+const Userbase: Module<Options> = function (options) {
+  this.addPlugin({
+    src: path.resolve(__dirname, 'plugin.js'),
+    options
+  })
+}
+
+export default Userbase
+export const meta = require('./package.json')

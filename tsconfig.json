@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["esnext"],
-    "outDir": "./lib",
-    "rootDir": "./src",
+    "target": "es2020",
+    "module": "commonjs",
     "strict": true,
-    "types": ["node", "jest"],
-    "esModuleInterop": true
+    "rootDir": "./src",
+    "outDir": "./lib",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "node",
+      "jest"
+    ]
   },
   "include": ["src/**/*"]
 }
