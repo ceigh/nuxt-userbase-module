@@ -9,14 +9,18 @@
     "nuxt"
   ],
   "main": "lib/module.js",
+  "files": [
+    "lib"
+  ],
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
     "watch": "tsc --watch",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{ts,json,vue}' '!.yarn/**'"
+    "format": "prettier --write --ignore-path .gitignore './**/*.{ts,json,vue}' '!.yarn/**'",
+    "prepack": "tsc",
+    "postpack": "rm -rf lib"
   },
   "dependencies": {
-    "userbase-js": "^1.4.0"
+    "userbase-js": "latest"
   },
   "devDependencies": {
     "@nuxt/types": "latest",
@@ -30,7 +34,7 @@
   "prettier": "prettier-config-standard",
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format && yarn build"
+      "pre-commit": "yarn format"
     }
   }
 }
