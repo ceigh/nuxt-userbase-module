@@ -1,8 +1,7 @@
+import puppeteer from 'puppeteer'
+import request from 'request-promise-native'
+import { Nuxt, Builder } from 'nuxt'
 import config from '../fixture/nuxt.config'
-
-const puppeteer = require('puppeteer')
-const request = require('request-promise-native')
-const { Nuxt, Builder } = require('nuxt')
 
 const url = (path: string) => `http://localhost:3000${path}`
 const get = (path: string) => request(url(path))

@@ -21,19 +21,19 @@
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,ts,json,vue}'"
   },
   "dependencies": {
-    "consola": "^2.3.2"
+    "consola": "^2.12.1"
   },
   "devDependencies": {
-    "@types/consola": "^1.0.0",
-    "@types/jest": "^23.3.13",
-    "@types/jsdom": "^12.2.1",
-    "@types/node": "^10.12.21",
-    "jest": "^23.4.1",
-    "nuxt": "^2.4.0",
-    "prettier": "^1.16.1",
-    "puppeteer": "^1.6.1",
-    "ts-jest": "^23.10.5",
-    "typescript": "^3.2.4"
+    "@types/consola": "^2.2.5",
+    "@types/jest": "^25.2.3",
+    "@types/jsdom": "^16.2.3",
+    "@types/node": "^14.0.4",
+    "jest": "^26.0.1",
+    "nuxt": "^2.12.2",
+    "prettier": "^2.0.5",
+    "puppeteer": "^3.1.0",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.3"
   },
   "jest": {
     "preset": "ts-jest",
