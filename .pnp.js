@@ -58,6 +58,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.0.5"
       ],
       [
+        "prettier-config-standard",
+        "npm:1.0.1"
+      ],
+      [
         "ts-jest",
         "virtual:2567e7c8c19f4ef66d97eb8e6b08d7b89a5ae4155ec8ad349fd37be4321789dcdaa6427f101dba25fea69ac2ca141cde79f8d1af25ac0d5b02655b9d273cade0#npm:26.0.0"
       ],
@@ -80,6 +84,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "npm:26.0.1"],
             ["nuxt", "npm:2.12.2"],
             ["prettier", "npm:2.0.5"],
+            ["prettier-config-standard", "npm:1.0.1"],
             ["ts-jest", "virtual:2567e7c8c19f4ef66d97eb8e6b08d7b89a5ae4155ec8ad349fd37be4321789dcdaa6427f101dba25fea69ac2ca141cde79f8d1af25ac0d5b02655b9d273cade0#npm:26.0.0"],
             ["typescript", "patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=8cac75"]
           ],
@@ -9477,6 +9482,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "npm:26.0.1"],
             ["nuxt", "npm:2.12.2"],
             ["prettier", "npm:2.0.5"],
+            ["prettier-config-standard", "npm:1.0.1"],
             ["ts-jest", "virtual:2567e7c8c19f4ef66d97eb8e6b08d7b89a5ae4155ec8ad349fd37be4321789dcdaa6427f101dba25fea69ac2ca141cde79f8d1af25ac0d5b02655b9d273cade0#npm:26.0.0"],
             ["typescript", "patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=8cac75"]
           ],
@@ -11041,6 +11047,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/prettier-npm-2.0.5-f0ee4e15ce-3.zip/node_modules/prettier/",
           "packageDependencies": [
             ["prettier", "npm:2.0.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["prettier-config-standard", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/prettier-config-standard-npm-1.0.1-89ea2a3430-3.zip/node_modules/prettier-config-standard/",
+          "packageDependencies": [
+            ["prettier-config-standard", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]

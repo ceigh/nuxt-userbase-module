@@ -24,6 +24,7 @@
     "jest": "^26.0.1",
     "nuxt": "^2.12.2",
     "prettier": "^2.0.5",
+    "prettier-config-standard": "^1.0.1",
     "ts-jest": "^26.0.0",
     "typescript": "^3.9.3"
   },
@@ -31,12 +32,7 @@
     "preset": "ts-jest",
     "testEnvironment": "node"
   },
-  "prettier": {
-    "trailingComma": "none",
-    "tabWidth": 2,
-    "semi": false,
-    "singleQuote": true
-  },
+  "prettier": "prettier-config-standard",
   "husky": {
     "hooks": {
       "pre-commit": "yarn format && yarn test && yarn build"
