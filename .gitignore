@@ -50,3 +50,6 @@ dist
 !.yarn/cache
 !.yarn/releases
 !.yarn/plugins
+
+# Build
+lib
