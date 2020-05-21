@@ -13,4 +13,4 @@ const Userbase: Module<Options> = function (options) {
 }
 
 export default Userbase
-export const meta = require('./package.json')
+export const meta = require('../package.json')

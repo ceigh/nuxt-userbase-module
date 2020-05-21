@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@nuxt/types": "latest",
-    "@types/jest": "latest",
     "@types/node": "latest",
     "husky": "latest",
     "prettier": "latest",
