@@ -17,6 +17,9 @@ const userbaseInit: UserbaseInit = () => {
     },
     signUp(opts) {
       return userbase.signUp(opts)
+    },
+    signIn(opts) {
+      return userbase.signIn(opts)
     }
   }
 }

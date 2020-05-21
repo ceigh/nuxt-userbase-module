@@ -24,6 +24,7 @@ interface Session {
   readonly user?: User
   readonly lastUsedUsername?: string
 }
+type RememberMe = 'local' | 'session' | 'none'
 
 interface InitOpts {
   readonly appId: string
@@ -33,11 +34,17 @@ interface SignUpOpts {
   readonly password: string
   readonly email?: string
   readonly profile?: UserProfile
-  readonly rememberMe?: 'local' | 'session' | 'none'
+  readonly rememberMe?: RememberMe
+}
+interface SignInOpts {
+  readonly username: string
+  readonly password: string
+  readonly rememberMe?: RememberMe
 }
 
 interface Userbase {
   readonly init: (opts: InitOpts) => Promise<Session>
   readonly signUp: (opts: SignUpOpts) => Promise<User>
+  readonly signIn: (opts: SignInOpts) => Promise<User>
 }
 export type UserbaseInit = () => Userbase
