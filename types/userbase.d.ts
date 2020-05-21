@@ -1,10 +1,13 @@
+interface UserProfile {
+  readonly [key: string]: string
+}
 interface User {
   readonly username: string
   readonly userId: string
   readonly authToken: string
   readonly creationDate: Date
   readonly email?: string
-  readonly profile?: object
+  readonly profile?: UserProfile
   readonly paymentsMode: 'disabled' | 'test' | 'prod'
   readonly subscriptionStatus?:
     | 'active'
@@ -25,8 +28,16 @@ interface Session {
 interface InitOpts {
   readonly appId: string
 }
+interface SignUpOpts {
+  readonly username: string
+  readonly password: string
+  readonly email?: string
+  readonly profile?: UserProfile
+  readonly rememberMe?: 'local' | 'session' | 'none'
+}
 
 interface Userbase {
   readonly init: (opts: InitOpts) => Promise<Session>
+  readonly signUp: (opts: SignUpOpts) => Promise<User>
 }
 export type UserbaseInit = () => Userbase
