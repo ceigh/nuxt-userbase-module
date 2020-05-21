@@ -1,6 +1,6 @@
 import userbase from 'userbase-js'
 import { Plugin } from '@nuxt/types'
-import { Userbase, UserbaseInit } from '../types/userbase'
+import { Userbase, UserbaseInit } from '../types'
 
 const _opts = { appId: '<%= options.appId %>' }
 
