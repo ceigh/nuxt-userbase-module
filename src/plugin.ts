@@ -26,6 +26,9 @@ const userbaseInit: UserbaseInit = () => {
     },
     forgotPassword(opts) {
       return userbase.forgotPassword(opts)
+    },
+    updateUser(opts) {
+      return userbase.updateUser(opts)
     }
   }
 }

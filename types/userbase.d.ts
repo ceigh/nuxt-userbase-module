@@ -1,3 +1,4 @@
+// Common
 interface UserProfile {
   readonly [key: string]: string
 }
@@ -26,6 +27,7 @@ interface Session {
 }
 type RememberMe = 'local' | 'session' | 'none'
 
+// Opts
 interface InitOpts {
   readonly appId: string
 }
@@ -44,12 +46,21 @@ interface SignInOpts {
 interface ForgotPasswordOpts {
   readonly username: string
 }
+interface UpdateUserOpts {
+  readonly username?: string
+  readonly currentPassword?: string
+  readonly newPassword?: string
+  readonly email?: string | null
+  readonly profile?: UserProfile
+}
 
+// Methods
 interface Userbase {
   readonly init: (opts: InitOpts) => Promise<Session>
   readonly signUp: (opts: SignUpOpts) => Promise<User>
   readonly signIn: (opts: SignInOpts) => Promise<User>
   readonly signOut: () => Promise<void>
   readonly forgotPassword: (opts: ForgotPasswordOpts) => Promise<void>
+  readonly updateUser: (opts: UpdateUserOpts) => Promise<void>
 }
 export type UserbaseInit = () => Userbase
