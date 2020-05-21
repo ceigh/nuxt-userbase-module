@@ -72,6 +72,22 @@ declare module '@nuxt/types' {
 }
 ```
 
+
+## Development
+
+This project is build with new [yarn 2 "berry"](https://github.com/yarnpkg/berry)
+
+So it supports "Zero-installs", you need just:
+
+```bash
+git clone git@github.com:ceigh/nuxt-userbase-module.git
+cd nuxt-userbase-module
+
+# now you can start development
+yarn watch
+```
+
+
 ## License
 
 [MIT License](./LICENSE)

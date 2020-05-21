@@ -19,14 +19,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],
     "dependencyTreeRoots": [
       {
-        "name": "nuxt-userbase",
+        "name": "nuxt-userbase-module",
         "reference": "workspace:."
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.vscode\\/pnpify(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["nuxt-userbase", ["workspace:."]]
+      ["nuxt-userbase-module", ["workspace:."]]
     ],
     "fallbackPool": [
       [
@@ -908,11 +908,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["nuxt-userbase", [
+      ["nuxt-userbase-module", [
         ["workspace:.", {
           "packageLocation": "./",
           "packageDependencies": [
-            ["nuxt-userbase", "workspace:."],
+            ["nuxt-userbase-module", "workspace:."],
             ["@nuxt/types", "npm:0.7.6"],
             ["@types/node", "npm:14.0.4"],
             ["husky", "npm:4.2.5"],
