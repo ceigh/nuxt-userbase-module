@@ -62,5 +62,6 @@ interface Userbase {
   readonly signOut: () => Promise<void>
   readonly forgotPassword: (opts: ForgotPasswordOpts) => Promise<void>
   readonly updateUser: (opts: UpdateUserOpts) => Promise<void>
+  readonly deleteUser: () => Promise<void>
 }
 export type UserbaseInit = () => Userbase

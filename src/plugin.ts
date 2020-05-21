@@ -29,6 +29,9 @@ const userbaseInit: UserbaseInit = () => {
     },
     updateUser(opts) {
       return userbase.updateUser(opts)
+    },
+    deleteUser() {
+      return userbase.deleteUser()
     }
   }
 }
