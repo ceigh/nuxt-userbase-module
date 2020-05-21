@@ -46,5 +46,6 @@ interface Userbase {
   readonly init: (opts: InitOpts) => Promise<Session>
   readonly signUp: (opts: SignUpOpts) => Promise<User>
   readonly signIn: (opts: SignInOpts) => Promise<User>
+  readonly signOut: () => Promise<void>
 }
 export type UserbaseInit = () => Userbase

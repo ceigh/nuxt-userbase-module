@@ -20,6 +20,9 @@ const userbaseInit: UserbaseInit = () => {
     },
     signIn(opts) {
       return userbase.signIn(opts)
+    },
+    signOut() {
+      return userbase.signOut()
     }
   }
 }
