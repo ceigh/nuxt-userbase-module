@@ -23,6 +23,9 @@ const userbaseInit: UserbaseInit = () => {
     },
     signOut() {
       return userbase.signOut()
+    },
+    forgotPassword(opts) {
+      return userbase.forgotPassword(opts)
     }
   }
 }

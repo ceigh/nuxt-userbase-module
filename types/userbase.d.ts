@@ -41,11 +41,15 @@ interface SignInOpts {
   readonly password: string
   readonly rememberMe?: RememberMe
 }
+interface ForgotPasswordOpts {
+  readonly username: string
+}
 
 interface Userbase {
   readonly init: (opts: InitOpts) => Promise<Session>
   readonly signUp: (opts: SignUpOpts) => Promise<User>
   readonly signIn: (opts: SignInOpts) => Promise<User>
   readonly signOut: () => Promise<void>
+  readonly forgotPassword: (opts: ForgotPasswordOpts) => Promise<void>
 }
 export type UserbaseInit = () => Userbase
