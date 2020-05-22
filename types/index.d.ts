@@ -2,6 +2,10 @@ import { Users } from './users'
 import { Data } from './data'
 import { Payments } from './payments'
 
+export interface Opts {
+  appId?: string
+}
+
 export interface Userbase {
   init: (opts: Users.InitOpts) => Promise<Users.Session>
   signUp: (opts: Users.SignUpOpts) => Promise<Users.User>
@@ -24,5 +28,3 @@ export interface Userbase {
   resumeSubscription: () => Promise<void>
   updatePaymentMethod: (opts: Payments.UpdatePaymentMethodOpts) => Promise<void>
 }
-
-export type UserbaseInit = () => Userbase

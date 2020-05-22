@@ -1,63 +1,8 @@
-import userbase from 'userbase-js'
+import u from 'userbase-js'
 import { Plugin } from '@nuxt/types'
-import { Userbase, UserbaseInit } from '../types'
+import { Userbase } from '../types'
 
 const appId = '<%= options.appId %>'
-
-const userbaseInit: UserbaseInit = () => {
-  return {
-    init(opts = { appId }) {
-      return userbase.init(opts)
-    },
-    signUp(opts) {
-      return userbase.signUp(opts)
-    },
-    signIn(opts) {
-      return userbase.signIn(opts)
-    },
-    signOut() {
-      return userbase.signOut()
-    },
-    forgotPassword(opts) {
-      return userbase.forgotPassword(opts)
-    },
-    updateUser(opts) {
-      return userbase.updateUser(opts)
-    },
-    deleteUser() {
-      return userbase.deleteUser()
-    },
-
-    openDatabase(opts) {
-      return userbase.openDatabase(opts)
-    },
-    insertItem(opts) {
-      return userbase.insertItem(opts)
-    },
-    updateItem(opts) {
-      return userbase.updateItem(opts)
-    },
-    deleteItem(opts) {
-      return userbase.deleteItem(opts)
-    },
-    putTransaction(opts) {
-      return userbase.putTransaction(opts)
-    },
-
-    purchaseSubscription(opts) {
-      return userbase.purchaseSubscription(opts)
-    },
-    cancelSubscription() {
-      return userbase.cancelSubscription()
-    },
-    resumeSubscription() {
-      return userbase.resumeSubscription()
-    },
-    updatePaymentMethod(opts) {
-      return userbase.updatePaymentMethod(opts)
-    }
-  }
-}
 
 declare module '@nuxt/types' {
   interface Context {
@@ -66,6 +11,25 @@ declare module '@nuxt/types' {
 }
 
 const plugin: Plugin = context => {
-  context.$userbase = userbaseInit()
+  context.$userbase = {
+    init: (opts = { appId }) => u.init(opts),
+    signUp: opts => u.signUp(opts),
+    signIn: opts => u.signIn(opts),
+    signOut: () => u.signOut(),
+    forgotPassword: opts => u.forgotPassword(opts),
+    updateUser: opts => u.updateUser(opts),
+    deleteUser: () => u.deleteUser(),
+
+    openDatabase: opts => u.openDatabase(opts),
+    insertItem: opts => u.insertItem(opts),
+    updateItem: opts => u.updateItem(opts),
+    deleteItem: opts => u.deleteItem(opts),
+    putTransaction: opts => u.putTransaction(opts),
+
+    purchaseSubscription: opts => u.purchaseSubscription(opts),
+    cancelSubscription: () => u.cancelSubscription(),
+    resumeSubscription: () => u.resumeSubscription(),
+    updatePaymentMethod: opts => u.updatePaymentMethod(opts)
+  }
 }
 export default plugin

@@ -1,15 +1,12 @@
 import path from 'path'
 import { Module } from '@nuxt/types'
+import { Opts } from '../types'
 
-interface ModuleOpts {
-  debug?: boolean
-  appId?: string
-}
-
-const Userbase: Module<ModuleOpts> = function (moduleOpts) {
+const Userbase: Module<Opts> = function (moduleOpts) {
+  const globalOpts: Opts = this.options.userbase
   this.addPlugin({
     src: path.resolve(__dirname, 'plugin.js'),
-    options: { ...this.options.userbase, ...moduleOpts }
+    options: { ...globalOpts, ...moduleOpts }
   })
 }
 
