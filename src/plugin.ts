@@ -48,6 +48,10 @@ const userbaseInit: UserbaseInit = () => {
     },
     putTransaction(opts) {
       return userbase.putTransaction(opts)
+    },
+
+    purchaseSubscription(opts) {
+      return userbase.purchaseSubscription(opts)
     }
   }
 }

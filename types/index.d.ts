@@ -1,5 +1,6 @@
 import { Users } from './users'
 import { Data } from './data'
+import { Payments } from './payments'
 
 export interface Userbase {
   init: (opts: Users.InitOpts) => Promise<Users.Session>
@@ -15,6 +16,10 @@ export interface Userbase {
   updateItem: (opts: Data.UpdateItemOpts) => Promise<void>
   deleteItem: (opts: Data.DeleteItemOpts) => Promise<void>
   putTransaction: (opts: Data.PutTransaction) => Promise<void>
+
+  purchaseSubscription: (
+    opts: Payments.PurchaseSubscriptionOpts
+  ) => Promise<void>
 }
 
 export type UserbaseInit = () => Userbase

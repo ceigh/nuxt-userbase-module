@@ -1,4 +1,5 @@
 export namespace Users {
+  export type RememberMe = 'local' | 'session' | 'none'
   export interface UserProfile {
     [key: string]: string
   }
@@ -25,7 +26,6 @@ export namespace Users {
     user?: User
     lastUsedUsername?: string
   }
-  export type RememberMe = 'local' | 'session' | 'none'
 
   export interface InitOpts {
     appId: string
