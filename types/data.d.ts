@@ -1,16 +1,22 @@
 export namespace Data {
-  export interface Item {
+  export type Item = object | string | number | boolean | null
+  export interface IndexedItem {
     readonly itemId: string
-    readonly item: object
+    readonly item: Item
   }
 
   export interface OpenDatabaseOpts {
     readonly databaseName: string
-    readonly changeHandler: (items: Item[]) => any
+    readonly changeHandler: (items: IndexedItem[]) => any
   }
   export interface InsertItemOpts {
     readonly databaseName: string
-    readonly item: object | string | number | boolean | null
+    readonly item: Item
     readonly itemId?: string
+  }
+  export interface UpdateItemOpts {
+    readonly databaseName: string
+    readonly item: Item
+    readonly itemId: string
   }
 }

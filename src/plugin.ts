@@ -39,6 +39,9 @@ const userbaseInit: UserbaseInit = () => {
     },
     insertItem(opts) {
       return userbase.insertItem(opts)
+    },
+    updateItem(opts) {
+      return userbase.updateItem(opts)
     }
   }
 }

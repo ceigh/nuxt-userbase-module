@@ -12,6 +12,7 @@ export interface Userbase {
 
   readonly openDatabase: (opts: Data.OpenDatabaseOpts) => Promise<void>
   readonly insertItem: (opts: Data.InsertItemOpts) => Promise<void>
+  readonly updateItem: (opts: Data.UpdateItemOpts) => Promise<void>
 }
 
 export type UserbaseInit = () => Userbase
