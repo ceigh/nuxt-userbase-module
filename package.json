@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "description": "Nuxt Userbase integration",
   "author": "Artjom Löbsack <ceigh@pm.me> (http://ceigh.github.io)",
+  "repository": "github:ceigh/nuxt-userbase-module",
   "keywords": [
     "nuxt",
     "nuxt-module",
