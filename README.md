@@ -2,6 +2,9 @@
 > User authentication and data storage in
 [Nuxt](https://nuxtjs.org) with [Userbase](https://userbase.com).
 
+![npm](https://img.shields.io/npm/v/nuxt-userbase-module?style=plastic)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/nuxt-userbase-module?style=plastic)
+
 
 ## Setup
 
