@@ -42,6 +42,9 @@ const userbaseInit: UserbaseInit = () => {
     },
     updateItem(opts) {
       return userbase.updateItem(opts)
+    },
+    deleteItem(opts) {
+      return userbase.deleteItem(opts)
     }
   }
 }

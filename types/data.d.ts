@@ -19,4 +19,8 @@ export namespace Data {
     readonly item: Item
     readonly itemId: string
   }
+  export interface DeleteItemOpts {
+    readonly databaseName: string
+    readonly itemId: string
+  }
 }
