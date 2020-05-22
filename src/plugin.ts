@@ -55,6 +55,9 @@ const userbaseInit: UserbaseInit = () => {
     },
     cancelSubscription() {
       return userbase.cancelSubscription()
+    },
+    resumeSubscription() {
+      return userbase.resumeSubscription()
     }
   }
 }

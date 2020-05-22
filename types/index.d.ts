@@ -21,6 +21,7 @@ export interface Userbase {
     opts: Payments.PurchaseSubscriptionOpts
   ) => Promise<void>
   cancelSubscription: () => Promise<Payments.CancelSubscriptionResult>
+  resumeSubscription: () => Promise<void>
 }
 
 export type UserbaseInit = () => Userbase
