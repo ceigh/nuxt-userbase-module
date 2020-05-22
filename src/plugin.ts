@@ -2,17 +2,11 @@ import userbase from 'userbase-js'
 import { Plugin } from '@nuxt/types'
 import { Userbase, UserbaseInit } from '../types'
 
-const _opts = { appId: '<%= options.appId %>' }
-
-declare module '@nuxt/types' {
-  interface Context {
-    $userbase: Userbase
-  }
-}
+const appId = '<%= options.appId %>'
 
 const userbaseInit: UserbaseInit = () => {
   return {
-    init(opts = _opts) {
+    init(opts = { appId }) {
       return userbase.init(opts)
     },
     signUp(opts) {
@@ -62,6 +56,12 @@ const userbaseInit: UserbaseInit = () => {
     updatePaymentMethod(opts) {
       return userbase.updatePaymentMethod(opts)
     }
+  }
+}
+
+declare module '@nuxt/types' {
+  interface Context {
+    $userbase: Userbase
   }
 }
 

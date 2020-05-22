@@ -13,16 +13,16 @@ yarn add -D nuxt-userbase-module # or npm i -D nuxt-userbase-module
 
 2. Add `nuxt-userbase-module` to the `buildModules` section of `nuxt.config.js`.
 
-3. Add `appId` in module options from your [Userbase app](https://v1.userbase.com/).
+3. Add `appId` to the `userbase` section. Take it [here](https://v1.userbase.com/).
 
 ```js
 {
   buildModules: [
-    [
-      'nuxt-userbase-module',
-      { appId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' }  // required
-    ]
-  ]
+    'nuxt-userbase-module',
+  ],
+  userbase: {
+    appId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+  }
 }
 ```
 
