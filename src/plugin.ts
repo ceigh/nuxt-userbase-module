@@ -36,6 +36,9 @@ const userbaseInit: UserbaseInit = () => {
 
     openDatabase(opts) {
       return userbase.openDatabase(opts)
+    },
+    insertItem(opts) {
+      return userbase.insertItem(opts)
     }
   }
 }
