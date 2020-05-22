@@ -32,6 +32,10 @@ const userbaseInit: UserbaseInit = () => {
     },
     deleteUser() {
       return userbase.deleteUser()
+    },
+
+    openDatabase(opts) {
+      return userbase.openDatabase(opts)
     }
   }
 }

@@ -27,7 +27,6 @@ export namespace Users {
   }
   export type RememberMe = 'local' | 'session' | 'none'
 
-
   export interface InitOpts {
     readonly appId: string
   }
