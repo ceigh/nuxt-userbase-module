@@ -1,11 +1,16 @@
-export namespace Payments {
-  export interface CancelSubscriptionResult {
-    cancelSubscriptionAt: Date
-  }
+interface CancelSubscriptionResult {
+  cancelSubscriptionAt: Date
+}
 
-  export interface PurchaseSubscriptionOpts {
-    successUrl: string
-    cancelUrl: string
-  }
-  export interface UpdatePaymentMethodOpts extends PurchaseSubscriptionOpts {}
+interface PurchaseSubscriptionOpts {
+  successUrl: string
+  cancelUrl: string
+}
+interface UpdatePaymentMethodOpts extends PurchaseSubscriptionOpts {}
+
+export namespace Payments {
+  type PurchaseSubscription = (opts: PurchaseSubscriptionOpts) => Promise<void>
+  type CancelSubscription = () => Promise<CancelSubscriptionResult>
+  type ResumeSubscription = () => Promise<void>
+  type UpdatePaymentMethod = (opts: UpdatePaymentMethodOpts) => Promise<void>
 }

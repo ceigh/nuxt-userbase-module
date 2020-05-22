@@ -2,29 +2,23 @@ import { Users } from './users'
 import { Data } from './data'
 import { Payments } from './payments'
 
-export interface Opts {
-  appId?: string
-}
-
 export interface Userbase {
-  init: (opts: Users.InitOpts) => Promise<Users.Session>
-  signUp: (opts: Users.SignUpOpts) => Promise<Users.User>
-  signIn: (opts: Users.SignInOpts) => Promise<Users.User>
-  signOut: () => Promise<void>
-  forgotPassword: (opts: Users.ForgotPasswordOpts) => Promise<void>
-  updateUser: (opts: Users.UpdateUserOpts) => Promise<void>
-  deleteUser: () => Promise<void>
+  init: Users.Init
+  signUp: Users.SignUp
+  signIn: Users.SignIn
+  signOut: Users.SignOut
+  forgotPassword: Users.ForgotPassword
+  updateUser: Users.UpdateUser
+  deleteUser: Users.DeleteUser
 
-  openDatabase: (opts: Data.OpenDatabaseOpts) => Promise<void>
-  insertItem: (opts: Data.InsertItemOpts) => Promise<void>
-  updateItem: (opts: Data.UpdateItemOpts) => Promise<void>
-  deleteItem: (opts: Data.DeleteItemOpts) => Promise<void>
-  putTransaction: (opts: Data.PutTransaction) => Promise<void>
+  openDatabase: Data.OpenDatabase
+  insertItem: Data.InsertItem
+  updateItem: Data.UpdateItem
+  deleteItem: Data.DeleteItem
+  putTransaction: Data.PutTransaction
 
-  purchaseSubscription: (
-    opts: Payments.PurchaseSubscriptionOpts
-  ) => Promise<void>
-  cancelSubscription: () => Promise<Payments.CancelSubscriptionResult>
-  resumeSubscription: () => Promise<void>
-  updatePaymentMethod: (opts: Payments.UpdatePaymentMethodOpts) => Promise<void>
+  purchaseSubscription: Payments.PurchaseSubscription
+  cancelSubscription: Payments.CancelSubscription
+  resumeSubscription: Payments.ResumeSubscription
+  updatePaymentMethod: Payments.UpdatePaymentMethod
 }

@@ -1,6 +1,9 @@
 import path from 'path'
 import { Module } from '@nuxt/types'
-import { Opts } from '../types'
+
+interface Opts {
+  appId?: string
+}
 
 const Userbase: Module<Opts> = function (moduleOpts) {
   const globalOpts: Opts = this.options.userbase
