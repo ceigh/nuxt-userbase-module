@@ -2,7 +2,7 @@ import path from 'path'
 import { Module } from '@nuxt/types'
 
 interface Options {
-  readonly appId: string
+  appId: string
 }
 
 const Userbase: Module<Options> = function (options) {
