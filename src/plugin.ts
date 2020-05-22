@@ -52,6 +52,9 @@ const userbaseInit: UserbaseInit = () => {
 
     purchaseSubscription(opts) {
       return userbase.purchaseSubscription(opts)
+    },
+    cancelSubscription() {
+      return userbase.cancelSubscription()
     }
   }
 }
