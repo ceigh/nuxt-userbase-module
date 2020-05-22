@@ -50,7 +50,7 @@ export default async function ({ $userbase }) {
   console.log(user)
 }
 ```
-[Learn more about context](https://nuxtjs.org/api/contex)
+[Learn more about context](https://nuxtjs.org/api/context#__layout)
 
 
 ### Methods
@@ -59,7 +59,7 @@ This module fully complies with the [Userbase SDK](https://userbase.com/docs/sdk
 
 You can use methods directly from SDK.
 
-This module is also fully [typed](./types/userbase.d.ts) with typescript in accordance with the SDK.
+This module is also fully [typed](./types) with typescript in accordance with the SDK.
 
 
 ## Notes
