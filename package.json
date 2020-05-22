@@ -12,7 +12,8 @@
   ],
   "main": "lib/module.js",
   "files": [
-    "lib"
+    "lib",
+    "types"
   ],
   "license": "MIT",
   "scripts": {

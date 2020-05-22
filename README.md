@@ -67,9 +67,11 @@ This module is also fully [typed](./types/userbase.d.ts) with typescript in acco
 If you are a [Nuxt TypeScript](https://typescript.nuxtjs.org) user, you must add this to your `~/types/index.d.ts` (or other file) for the module to work correctly:
 
 ```ts
+import { Userbase } from 'nuxt-userbase-module/types'
+
 declare module '@nuxt/types' {
   interface Context {
-    $userbase: any  // TODO: pass correct type
+    $userbase: Userbase
   }
 }
 ```

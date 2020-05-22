@@ -53,7 +53,7 @@ interface UpdateUserOpts {
 }
 
 export namespace Users {
-  type Init = (opts: InitOpts) => Promise<Session>
+  type Init = (opts?: InitOpts) => Promise<Session>
   type SignUp = (opts: SignUpOpts) => Promise<User>
   type SignIn = (opts: SignInOpts) => Promise<User>
   type SignOut = () => Promise<void>
