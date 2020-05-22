@@ -4,6 +4,11 @@ export namespace Data {
     readonly itemId: string
     readonly item: Item
   }
+  export interface Operation {
+    readonly command: 'Insert' | 'Update' | 'Delete'
+    readonly item: Item
+    readonly itemId?: string
+  }
 
   export interface OpenDatabaseOpts {
     readonly databaseName: string
@@ -22,5 +27,9 @@ export namespace Data {
   export interface DeleteItemOpts {
     readonly databaseName: string
     readonly itemId: string
+  }
+  export interface PutTransactionOpts {
+    readonly databaseName: string
+    readonly operations: Operation[]
   }
 }

@@ -14,6 +14,7 @@ export interface Userbase {
   readonly insertItem: (opts: Data.InsertItemOpts) => Promise<void>
   readonly updateItem: (opts: Data.UpdateItemOpts) => Promise<void>
   readonly deleteItem: (opts: Data.DeleteItemOpts) => Promise<void>
+  readonly putTransaction: (opts: Data.PutTransaction) => Promise<void>
 }
 
 export type UserbaseInit = () => Userbase
