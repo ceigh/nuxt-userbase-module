@@ -62,7 +62,7 @@ This module fully complies with the [Userbase SDK](https://userbase.com/docs/sdk
 
 You can use methods directly from SDK.
 
-This module is also fully [typed](./types) with typescript in accordance with the SDK.
+This module is also fully typed with typescript in accordance with the SDK.
 
 
 ## Notes
@@ -70,7 +70,7 @@ This module is also fully [typed](./types) with typescript in accordance with th
 If you are a [Nuxt TypeScript](https://typescript.nuxtjs.org) user, you must add this to your `~/types/index.d.ts` (or other file) for the module to work correctly:
 
 ```ts
-import { Userbase } from 'nuxt-userbase-module/types'
+import { Userbase } from 'userbase-js/types'
 
 declare module '@nuxt/types' {
   interface Context {
