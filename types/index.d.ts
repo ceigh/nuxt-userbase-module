@@ -22,6 +22,7 @@ export interface Userbase {
   ) => Promise<void>
   cancelSubscription: () => Promise<Payments.CancelSubscriptionResult>
   resumeSubscription: () => Promise<void>
+  updatePaymentMethod: (opts: Payments.UpdatePaymentMethodOpts) => Promise<void>
 }
 
 export type UserbaseInit = () => Userbase

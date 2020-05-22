@@ -58,6 +58,9 @@ const userbaseInit: UserbaseInit = () => {
     },
     resumeSubscription() {
       return userbase.resumeSubscription()
+    },
+    updatePaymentMethod(opts) {
+      return userbase.updatePaymentMethod(opts)
     }
   }
 }

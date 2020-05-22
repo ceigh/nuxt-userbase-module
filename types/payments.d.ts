@@ -7,4 +7,5 @@ export namespace Payments {
     successUrl: string
     cancelUrl: string
   }
+  export interface UpdatePaymentMethodOpts extends PurchaseSubscriptionOpts {}
 }
