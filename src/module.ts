@@ -1,8 +1,7 @@
 import path from 'path'
-
 import { Module } from '@nuxt/types'
 
-interface Options {
+export interface Options {
   appId: string
 }
 

@@ -67,32 +67,9 @@ You can use methods directly from SDK.
 This module is also fully typed with typescript in accordance with the SDK.
 
 
-## Notes
+## TypeScript
 
-If you are a [Nuxt TypeScript](https://typescript.nuxtjs.org) user, you must add this to your `.d.ts` file for the module to work correctly:
-
-```ts
-import { Userbase } from 'userbase-js/types'
-
-declare module 'vue/types/vue' {
-  interface Vue {
-    $userbase: Userbase
-  }
-}
-declare module '@nuxt/types' {
-  interface NuxtAppOptions {
-    $userbase: Userbase
-  }
-  interface Context {
-    $userbase: Userbase
-  }
-}
-declare module 'vuex/types/index' {
-  interface Store<S> {
-    $userbase: Userbase
-  }
-}
-```
+If you are a [Nuxt TypeScript](https://typescript.nuxtjs.org) user, you need to add [declarations](./index.d.ts) to your `.d.ts` file for the module to work correctly.
 
 ## License
 
