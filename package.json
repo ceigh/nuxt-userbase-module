@@ -1,6 +1,6 @@
 {
   "name": "nuxt-userbase-module",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Nuxt Userbase integration",
   "author": "Artjom Löbsack <me@ceigh.com> (https://ceigh.com)",
   "repository": "github:ceigh/nuxt-userbase-module",
@@ -10,7 +10,7 @@
     "nuxt-plugin",
     "userbase"
   ],
-  "main": "lib/module.js",
+  "main": "dist/module.js",
   "files": [
     "dist"
   ],
