@@ -1,14 +1,15 @@
 import path from 'path'
+
 import { Module } from '@nuxt/types'
 
-interface Opts {
-  appId?: string
+interface Options {
+  appId: string
 }
 
-const Userbase: Module<Opts> = function (moduleOpts) {
-  const options = { ...this.options.userbase, ...moduleOpts }
+const Userbase: Module<Options> = function (moduleOpts) {
+  const options: Options = { ...this.options.userbase, ...moduleOpts }
   if (!options.appId) {
-    throw new Error('`appId` is required in userbase options')
+    throw new Error('Missing `appId` in userbase options')
   }
 
   this.addPlugin({
