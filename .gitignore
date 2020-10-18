@@ -29,10 +29,8 @@ node_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# nuxt.js build output
+# Nuxt
 .nuxt
-
-# Nuxt generate
 dist
 
 # IDE / Editor
@@ -44,12 +42,6 @@ dist
 
 # Vim swap files
 *.swp
-
-# Yarn berry
-.yarn/*
-!.yarn/cache
-!.yarn/releases
-!.yarn/plugins
 
 # Build
 lib

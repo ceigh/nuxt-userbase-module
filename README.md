@@ -1,4 +1,4 @@
-# ⚾️ nuxt-userbase-module
+# nuxt-userbase-module
 > User authentication and data storage in
 [Nuxt](https://nuxtjs.org) with [Userbase](https://userbase.com).
 
@@ -10,7 +10,7 @@
 
 1. Add `nuxt-userbase-module` dev dependency to your project
 
-```bash
+```sh
 yarn add -D nuxt-userbase-module # or npm i -D nuxt-userbase-module
 ```
 
@@ -79,24 +79,8 @@ declare module '@nuxt/types' {
 }
 ```
 
-
-## Development
-
-This project is build with [Yarn 2 Berry](https://github.com/yarnpkg/berry).
-
-So it supports [Zero-Installs](https://yarnpkg.com/features/zero-installs), you need just:
-
-```bash
-git clone git@github.com:ceigh/nuxt-userbase-module.git
-cd nuxt-userbase-module
-
-# now you can start development
-yarn watch
-```
-
-
 ## License
 
 [MIT License](./LICENSE)
 
-Copyright (c) Artjom Löbsack
+Copyright © Artjom Löbsack

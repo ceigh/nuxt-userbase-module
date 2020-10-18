@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2018",
     "module": "ESNext",
     "moduleResolution": "Node",
     "rootDir": "src",
     "outDir": "lib",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "keyofStringsOnly": true,
     "noImplicitReturns": true,
