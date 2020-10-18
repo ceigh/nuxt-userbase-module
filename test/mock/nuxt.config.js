@@ -4,5 +4,6 @@ module.exports = {
   ],
   userbase: {
     appId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
-  }
+  },
+  dev: false
 }

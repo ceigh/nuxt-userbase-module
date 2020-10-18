@@ -1,13 +1,9 @@
-const { resolve } = require('path')
 const test = require('ava')
 const { Nuxt, Builder } = require('nuxt')
+const _ = require('./_.js')
 
 test.before('Set config', (t) => {
-  const rootDir = resolve(__dirname, 'mock')
-  const config = require(resolve(rootDir, 'nuxt.config.js'))
-  config.rootDir = rootDir
-  config.dev = false
-  t.context.config = config // save config to context
+  t.context.config = _.getConfig()
 })
 
 test('Building fails with bad config', async (t) => {
