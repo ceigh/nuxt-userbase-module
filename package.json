@@ -32,7 +32,7 @@
     }
   },
   "dependencies": {
-    "userbase-js": "^2.2.2"
+    "userbase-js": "latest"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.7",

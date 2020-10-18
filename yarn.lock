@@ -2438,7 +2438,7 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-userbase-js@^2.2.2:
+userbase-js@latest:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/userbase-js/-/userbase-js-2.2.2.tgz#2a105c8de570c14a807a3856c267afb6fa56b408"
   integrity sha512-QvWljlEbXy1w2dW3KvAcXlOEopZXanth+mmoCXPOdr53963WjaBeoF7P1QKYpRWmA83tQf+VtTLEJHLZJa/nww==

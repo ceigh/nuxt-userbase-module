@@ -6,10 +6,14 @@ interface Opts {
 }
 
 const Userbase: Module<Opts> = function (moduleOpts) {
-  const globalOpts: Opts = this.options.userbase
+  const options = { ...this.options.userbase, ...moduleOpts }
+  if (!options.appId) {
+    throw new Error('`appId` is required in userbase options')
+  }
+
   this.addPlugin({
     src: path.resolve(__dirname, 'plugin.js'),
-    options: { ...globalOpts, ...moduleOpts }
+    options
   })
 }
 
