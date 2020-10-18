@@ -5,13 +5,16 @@
 [![npm](https://img.shields.io/npm/v/nuxt-userbase-module?style=plastic)](https://www.npmjs.com/package/nuxt-userbase-module)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/nuxt-userbase-module?style=plastic)](https://www.npmjs.com/package/nuxt-userbase-module)
 
-
 ## Setup
 
 1. Add `nuxt-userbase-module` dev dependency to your project
 
 ```sh
-yarn add -D nuxt-userbase-module # or npm i -D nuxt-userbase-module
+yarn add nuxt-userbase-module
+```
+or
+```sh
+npm install nuxt-userbase-module
 ```
 
 2. Add `nuxt-userbase-module` to the `buildModules` section of `nuxt.config.js`.
@@ -19,7 +22,7 @@ yarn add -D nuxt-userbase-module # or npm i -D nuxt-userbase-module
 3. Add `appId` to the `userbase` section. Take it [here](https://v1.userbase.com/).
 
 ```js
-{
+export default {
   buildModules: [
     'nuxt-userbase-module',
   ],
@@ -29,17 +32,16 @@ yarn add -D nuxt-userbase-module # or npm i -D nuxt-userbase-module
 }
 ```
 
-
 ## Usage
 
-After setup, `$userbase` object were injected to nuxt `context`.
+After setup, `$userbase` object were injected to vue instances, nuxt context and vuex store.
 
 
 ### Example
 You can call it like:
 
 ```js
-// ~/middleware/example.js
+// middleware/example.js
 export default async function ({ $userbase }) {
   const session = await $userbase.init()
   console.log(session)
@@ -67,13 +69,26 @@ This module is also fully typed with typescript in accordance with the SDK.
 
 ## Notes
 
-If you are a [Nuxt TypeScript](https://typescript.nuxtjs.org) user, you must add this to your `~/types/index.d.ts` (or other file) for the module to work correctly:
+If you are a [Nuxt TypeScript](https://typescript.nuxtjs.org) user, you must add this to your `.d.ts` file for the module to work correctly:
 
 ```ts
 import { Userbase } from 'userbase-js/types'
 
+declare module 'vue/types/vue' {
+  interface Vue {
+    $userbase: Userbase
+  }
+}
 declare module '@nuxt/types' {
+  interface NuxtAppOptions {
+    $userbase: Userbase
+  }
   interface Context {
+    $userbase: Userbase
+  }
+}
+declare module 'vuex/types/index' {
+  interface Store<S> {
     $userbase: Userbase
   }
 }
