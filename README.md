@@ -24,7 +24,7 @@ npm install nuxt-userbase-module
 ```js
 export default {
   buildModules: [
-    'nuxt-userbase-module',
+    'nuxt-userbase-module'
   ],
   userbase: {
     appId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
