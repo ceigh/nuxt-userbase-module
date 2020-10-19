@@ -1,6 +1,8 @@
-module.exports = {
+const { resolve } = require('path')
+
+exports.default = {
   buildModules: [
-    '../../dist/module.js'
+    resolve(__dirname, '../../dist/module.js')
   ],
   userbase: {
     appId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'

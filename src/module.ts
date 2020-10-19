@@ -1,5 +1,5 @@
 import path from 'path'
-import { Module } from '@nuxt/types'
+import type { Module } from '@nuxt/types'
 
 export interface Options {
   appId: string
@@ -18,4 +18,4 @@ const Userbase: Module<Options> = function (moduleOpts) {
 }
 
 export default Userbase
-export const meta = require('../package.json')
+export const meta = require('../../package.json')

@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "rootDir": "src",
+    "target": "es2018",
+    "module": "esnext",
+    "moduleResolution": "node",
     "outDir": "dist",
+    "importsNotUsedAsValues": "error",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
