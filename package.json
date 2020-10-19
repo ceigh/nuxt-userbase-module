@@ -32,7 +32,7 @@
   },
   "ava": {
     "files": [
-      "test/**/*.ts"
+      "test/**/*.test.ts"
     ],
     "typescript": {
       "rewritePaths": {
